@@ -1,5 +1,5 @@
 # Easy Password
-## Script to generate a secure and rememorable password.
+## Script to generate a secure and rememorable passwords.
 
 When it comes to create a password for some of our accounts,
 it becomes harder to remember a password as we increase its entropy.
