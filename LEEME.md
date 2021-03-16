@@ -39,8 +39,18 @@ alternatives = 5
 
 possible, why = is_possible(phrase, password_lenght)
 if possible:
-    password_alternatives = passwords
-    print(password_alternatives)
+    password_alternatives = passwords(phrase, password_lenght, alternatives)
+    print(f"Contraseñas generadas de '{phrase}':")
+    for idx, passwd in enumerate(password_alternatives):
+        print(f"{idx+1}.- {passwd}")
 else:
     print(why)
 ```
+## Output:
+
+Contraseñas generadas de 'Ahora podré recordar todas mis contraseñas!':  
+   1.- 4prt0D4Mc0ne  
+   2.- 4?ReD@rTmcnr  
+   3.- 4prr7mcNr3Ñs  
+   4.- @?RtM(O7asa$  
+   5.- @pRa7m(onraS  
