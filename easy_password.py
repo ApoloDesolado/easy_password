@@ -15,8 +15,7 @@ replacements={
 }
 
 def replace_chars(word):
-
-    # Randomly chooses characters from each trimmed word, then it randomly chooses a replacement from.
+    # Randomly chooses characters from each trimmed word, then it randomly chooses a replacement from
     # the replacements dictionary.
     replaced=''.join(x for x in ([secrets.choice(replacements[char]) for char in word if char in replacements]))
     return replaced
@@ -41,14 +40,14 @@ def shorten_words(words, password_len):
     return words
 
 def password(phrase, password_len):
-    phrase=phrase.lower()
+    phrase = phrase.lower()
     # Get alphanumeric charachters from the phrase.
-    alpha_n_words=re.finditer("\w+", phrase)
-    words=[ phrase[m.start():m.end()] for m in alpha_n_words ]
+    alpha_n_words = re.finditer("\w+", phrase)
+    words = [ phrase[m.start():m.end()] for m in alpha_n_words ]
     # Get randomly trimmed versions of the words.
     words = shorten_words(words, password_len)
     # Randomly replaces characters choosen from replacements dictionary.
-    words=[replace_chars(word) for word in words]
+    words =[ replace_chars(word) for word in words ]
     password = ''.join(word for word in words)
     return password
 
@@ -56,16 +55,16 @@ def is_possible(phrase, password_len):
     # Checks if it's possible to generate a password considering:
         # lenght of the phrase, password lenght, and the RESERVED constant.
     alpha_n_words=re.finditer("\w+", phrase)
-    words=[ phrase[m.start():m.end()] for m in alpha_n_words ]
-    if list_len(words) < password_len + password_len/RESERVED:
-        restant= int((password_len + password_len/RESERVED)-list_len(words))
+    words = [ phrase[m.start():m.end()] for m in alpha_n_words ]
+    if list_len(words) < password_len + password_len / RESERVED:
+        restant= int((password_len + password_len / RESERVED)-list_len(words))
         return False, f"Too short, add {restant} characters."
     elif len(words) > password_len:
         excedent=len(words)-password_len
         return False, f"Too long, remove {excedent} words."
     else:
-        return True, ""
+        return True, None
 
 def passwords(phrase: str, password_len: int, alternatives: int) -> list :
-    # Genertes 5 passwords from the given arguments.
+    # Genertes passwords from the given arguments.
     return [password(phrase, password_len) for _ in range(alternatives)]
