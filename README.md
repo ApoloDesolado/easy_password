@@ -4,7 +4,7 @@
 When it comes to create a password for some of our accounts,
 it becomes harder to remember a password as we increase its entropy.
 
-The approach of this script is to make it easier to generate rememorable
+The approach of this script is to make it easier to generate memorable
 passwords with a good amount of entropy.
 
 ## Parameters:
