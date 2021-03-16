@@ -1,4 +1,4 @@
-from password_generator import passwords, is_possible
+from easy_password import passwords, is_possible
 
 def generate_passwords(phrase):
     possible, why = is_possible(phrase, lenght)

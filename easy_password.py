@@ -1,23 +1,8 @@
 import secrets
 import re
 
-"""
-This script helps you to generate rememorable strong
-        passwords given a phrase you like.
-
-The function "passwords" requires 3 arguments:
-    phrase:       the phrase you like (must have an acceptable lenght)
-    password_len: lenght of the desired password (recommended to be higher than 10)
-    alternatives: number of generated passwords to return (mainly to chose the one you like the most)
-
-this function will return:
-    Bool, str
-    The boolean value is wether or not it's possible to generate the password.
-    The string is the reason of why it isn't possible (too short or too long)
-"""
-
-# This contstant defines how many characters will be reservated from each trimmed word.
-RESERVATED=1
+# This contstant defines how many characters will be reserved from each trimmed word.
+RESERVED=1
 
 # These are the possible replacements for each character, it contains symbols, numbers and uppercased characters.
 replacements={
@@ -69,11 +54,11 @@ def password(phrase, password_len):
 
 def is_possible(phrase, password_len):
     # Checks if it's possible to generate a password considering:
-        # lenght of the phrase, password lenght, and the RESERVATED constant.
+        # lenght of the phrase, password lenght, and the RESERVED constant.
     alpha_n_words=re.finditer("\w+", phrase)
     words=[ phrase[m.start():m.end()] for m in alpha_n_words ]
-    if list_len(words) < password_len + password_len/RESERVATED:
-        restant= int((password_len + password_len/RESERVATED)-list_len(words))
+    if list_len(words) < password_len + password_len/RESERVED:
+        restant= int((password_len + password_len/RESERVED)-list_len(words))
         return False, f"Too short, add {restant} characters."
     elif len(words) > password_len:
         excedent=len(words)-password_len
