@@ -24,6 +24,7 @@ passwords with a good amount of entropy.
       characters/words should be added/removed.
 
 + easy_password.**passwords**(phrase, password_lenght, alternatives):  
+   Generates the required amount of passwords.  
   **Return values**:
    + **passwords (list)**: Alternative passwords. 
 
