@@ -9,7 +9,7 @@ passwords with a good amount of entropy.
 
 ## Parameters:
 * **phrase**: phrase to convert into a password.
-* **password_lenght**: minimum lenght required for the password (the result might be longer).
+* **password_lenght**: lenght required for the password.
 * **alternatives**: number of alternative passwords to return (so the user chooses one).
 
 ----------------------
