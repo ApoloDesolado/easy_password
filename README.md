@@ -2,7 +2,7 @@
 ## Script to generate a secure and memorable passwords.
 
 When it comes to create a password for some of our accounts,
-it becomes harder to remember a password as we increase its entropy.
+it becomes harder to remember it as we increase its entropy.
 
 The approach of this script is to make it easier to generate memorable
 passwords with a good amount of entropy.
@@ -35,13 +35,15 @@ passwords with a good amount of entropy.
 ```python
 from easy_password import is_possible, passwords
 phrase = "Today is gonna be a nice day, I can feel it in the air!"
-password_lenght = 12
+password_lenght = 15
 alternatives = 5
 
 possible, why = is_possible(phrase, password_lenght)
 if possible:
-    password_alternatives = passwords
-    print(password_alternatives)
+    password_alternatives = passwords(phrase, password_lenght, alternatives)
+    print(f"Generated passwords from '{phrase}':")
+    for idx, passwd in enumerate(password_alternatives):
+        print(f"{idx+1}.- {passwd}")
 else:
     print(why)
 ```
