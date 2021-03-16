@@ -13,7 +13,7 @@ phrases=[
         "Hello, friend", "I would like to join your team, mate",
         "My grandpa says he got a new gun", "I tried to cry, but I couldn't",
         "I don't think you can join our team, mate", "how dare you!"
-]
+    ]
 
 lenght=12        # Desired lenght for the generated passwords.
 alternatives=5   # Number of alternative passwords to generate.
