@@ -47,3 +47,10 @@ if possible:
 else:
     print(why)
 ```
+## Output:
+   Generated passwords from 'Today is gonna be a nice day, I can feel it in the air!':  
+   1.- 74¡96anD1(F¡17a  
+   2.- 7I96aNcd1(fI1T@  
+   3.- Td1Gb@Nd1cF1¡Ta  
+   4.- tI&b@ND1(f3I¡t4  
+   5.- 7aiG6aND¡(fiIT@  
