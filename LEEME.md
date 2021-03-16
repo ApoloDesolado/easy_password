@@ -9,7 +9,7 @@ recordables con una buena cantidad de entropía.
 
 ## Parámetros:
 * **phrase**: frase para convertir en contraseña.
-* **password_lenght**: largo mínimo del que se requiera la contraseña (el resultado puede ser más largo).
+* **password_lenght**: largo del que se requiera la contraseña.
 * **alternatives**: numero de contraseñas alternativas generadas (para que el usuario elija una).
 ----------------------
 
