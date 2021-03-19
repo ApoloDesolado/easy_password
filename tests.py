@@ -10,6 +10,7 @@ def generate_passwords(phrase):
         print(f"{why}, ({phrase})")
 
 phrases=[
+        "I'm horny for nature and clean energy production",
         "Hello, friend", "I would like to join your team, mate",
         "My grandpa says he got a new gun", "I tried to cry, but I couldn't",
         "I don't think you can join our team, mate", "how dare you!"
